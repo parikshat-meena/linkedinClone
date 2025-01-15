@@ -1,0 +1,27 @@
+<p>navbar works!</p>
+<div style="display: flex; flex-direction: row; justify-content: space-between">
+  <div>
+    <button class="btn btn-dark m-2" routerLink="/home">home</button>
+    <button class="btn btn-primary m-2" routerLink="/directive">
+      directives
+    </button>
+    <button class="btn btn-warning m-2" routerLink="/pipe">pipe</button>
+    <button class="btn btn-success m-2" routerLink="/parent">parent</button>
+    <button class="btn btn-danger m-2" routerLink="/child">child</button>
+    <button class="btn btn-secondary m-2" routerLink="/form/3">form</button>
+    <button class="btn btn-info m-2" routerLink="/viewChild">view child</button>
+    <button class="btn btn-warning m-2" routerLink="/user">user</button>
+    <button class="btn btn-success m-2" routerLink="/crud">crud</button>
+    <button class="btn btn-danger m-2" routerLink="/pagination">
+      pagination
+    </button>
+    <button class="btn btn-primary m-2" routerLink="/customModule">
+      customModule
+    </button>
+  </div>
+  <div>
+    <button class="btn btn-outline-primary m-2" (click)="logout()">
+      logout
+    </button>
+  </div>
+</div>

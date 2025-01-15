@@ -1,0 +1,9 @@
+<p>dashboard works!</p>
+<h3>{{ currentUser.username }}</h3>
+<input [(ngModel)]="userName" class="form-control m-2" />
+<button (click)="toggleValue()" class="btn btn-primary m-2 p-2">
+  toggle value
+</button>
+<app-add [fname]="userName" [showValue]="showValue"></app-add>
+
+<input type="file" (change)="onFileSelected($event)" />

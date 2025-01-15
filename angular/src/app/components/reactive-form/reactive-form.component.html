@@ -1,0 +1,44 @@
+<!-- We can create reactive form in two ways 
+1. with form group and form control 
+2. with form builder class -->
+
+<p>reactive-form works!</p>
+
+<form [formGroup]="myForm" (ngSubmit)="OnSubmit()" class="m-3 container-sm">
+  <div class="mb-3">
+    <label for="fname">First Name</label>
+    <input id="fname" formControlName="fname" class="form-control" />
+  </div>
+  <div
+    *ngIf="myForm.controls['fname'].invalid && myForm.controls['fname'].touched"
+    class="text-danger"
+  >
+    name is required
+  </div>
+  <div class="mb-3">
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" class="form-control" />
+  </div>
+  <div
+    *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched"
+    class="text-danger"
+  >
+    email is required
+  </div>
+  <div class="mb-3">
+    <label for="mobileNo">mobileNo</label>
+    <input
+      id="mobileNo"
+      formControlName="mobileNo"
+      class="form-control"
+      maxlength="10"
+    />
+  </div>
+  <div
+    *ngIf="myForm.get('mobileNo')?.invalid && myForm.get('mobileNo')?.touched"
+    class="text-danger"
+  >
+    mobileNo should be 10 digit number
+  </div>
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,22 @@
+<p>user works!</p>
+<button (click)="loadData()">fetch data</button>
+<button (click)="getQuotes()" class="btn btn-primary m-2">
+  get quotes data
+</button>
+<button (click)="getServerData()" class="btn btn-success m-2">
+  fetch server data
+</button>
+<h1>User List</h1>
+<ul>
+  <li *ngFor="let user of data">{{ user.fname }}</li>
+</ul>
+
+<h1 *ngIf="quotes">Quotes List</h1>
+<ul>
+  <li *ngFor="let quote of quotes">{{ quote.quote }}</li>
+</ul>
+
+<h1 *ngIf="serverData">User Data from server List</h1>
+<ul>
+  <li *ngFor="let sd of serverData">{{ sd.fname }}</li>
+</ul>

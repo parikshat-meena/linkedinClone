@@ -1,0 +1,81 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "user": [
+    {
+      "id": "ea5a",
+      "fname": "parikshat",
+      "role": "trainer",
+      "accountNo": 9392
+    },
+    {
+      "id": "7a1b",
+      "fname": "ayush",
+      "role": "tester",
+       "accountNo": 2232
+    },
+    {
+      "id": "8ce2",
+      "fname": "mansi",
+      "role": "Project Manager",
+       "accountNo": 5453
+    },
+    {
+      "id": "83f1",
+      "fname": "sai",
+      "role": "Manager",
+       "accountNo": 8393
+    }
+  ],
+  "attendance":[
+    {
+      "id": "19301",
+      "punchInTime" : "7:30 am",
+      "punchOutTime": "5:40 pm",
+      "date": "26th dec 24",
+      "studentId" : "83f1"
+    },
+      {
+      "id": "19301",
+      "punchInTime" : "7:30 am",
+      "punchOutTime": "5:40 pm",
+      "date": "26th dec 24",
+      "studentId" : "83f1"
+    },
+      {
+      "id": "282",
+      "punchInTime" : "7:30 am",
+      "punchOutTime": "5:40 pm",
+      "date": "26th dec 24",
+      "studentId" : "83f1"
+    },  {
+      "id": "19301",
+      "punchInTime" : "7:30 am",
+      "punchOutTime": "5:40 pm",
+      "date": "26th dec 24",
+      "studentId" : "83f1"
+    }
+  ]
+}

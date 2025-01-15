@@ -1,0 +1,74 @@
+<!-- Directives are used to change DOM layout, appearance and behaviour. -->
+<!-- 1. structural directives -->
+<!-- 2. Attribute directives -->
+<!-- 3. Custom directives -->
+<!-- <p>1. structural directives works!</p> -->
+<!-- *ngIf -->
+<!-- *ngFor -->
+<!-- *ngSwitch -->
+
+<!-- 2. Attribute directives are used to change the DOM appearance -->
+<!-- 1. ngClass -->
+<!-- 2. ngStyle -->
+<!-- 3. ngModel -->
+<!-- 
+<div>{{ firstName }}</div>
+
+-->
+
+<div *ngIf="firstName">User is {{ firstName }}</div>
+
+<!-- <div *ngIf="showValue; then one; else two"></div> -->
+@if (showValue) {
+<div>this is the value : {{ showValue }}</div>
+}@else if(!showValue) {
+<div>this is the value : {{ showValue }}</div>
+}
+
+<!-- <ng-template #one>This is first template</ng-template>
+<ng-template #two>This is second template</ng-template> -->
+
+<p>*ngFor directive</p>
+<!-- <div *ngFor="let pName of player">{{ pName }}</div> -->
+
+<!-- @for(p of player; track p){
+<div>new syntax value : {{ p }}</div>
+} -->
+@for(students of objArr; track students.fname){
+<div>students role : {{ students.role }}</div>
+}
+
+<p>*ngSwitch directive</p>
+<div [ngSwitch]="playerName">
+  <div *ngSwitchCase="'rohit'">rohit selected</div>
+  <div *ngSwitchCase="'virat'">virat selected</div>
+  <div *ngSwitchCase="'dhoni'">dhoni selected</div>
+  <div *ngSwitchDefault>No player selected</div>
+</div>
+
+<div [ngSwitch]="playerName">
+  <div *ngFor="let pName of player">
+    <div *ngSwitchCase="pName">{{ pName }} selected</div>
+  </div>
+  <div *ngSwitchDefault>No player selected</div>
+</div>
+
+<!-- <p>2. Attribute directives works!</p>
+<div [ngClass]="showValue ? myClass : 'disableText'">
+  this is ng Class attribute
+</div>
+<button (click)="changeColor()">toggle</button>
+
+<div [ngStyle]="showValue ? myActiveStyle : mydisabledStyle">
+  this is the ngStyle div
+</div>
+
+<div>
+  <input [(ngModel)]="playerName" />
+  <input [(ngModel)]="firstName" />
+  <button (click)="onTextChange()">show player name</button>
+</div>
+
+<div appColordirective>Custom directive</div>
+<div>{{ value() + " " + valueStr() }}</div>
+<button (click)="onEmit()">emit value</button> -->

@@ -1,0 +1,14 @@
+<p>parent works!</p>
+<div>{{ userName }}</div>
+<input [(ngModel)]="inputValue" id="fname" name="fname" />
+<button (click)="sendValue()">send data to child</button>
+
+<p>data from child comp {{ subjectName }}</p>
+
+<div>child comp is below</div>
+<app-child
+  [fname]="arr"
+  [str]="value"
+  (sendChildValue)="receiveValueFromChild($event)"
+  [newInput]="'react'"
+></app-child>

@@ -1,0 +1,15 @@
+<!-- pipes are used to transform the value without change original values -->
+<!-- 1. inbuilt pipe -->
+<!-- 2. custom pipe -->
+<!-- 3. third party pipe -->
+<p>pipe works!</p>
+
+<div>student name is {{ firstName | uppercase }}</div>
+<div>student name is {{ firstName | lowercase }}</div>
+<div>student name is {{ 15 | currency : "INR" }}</div>
+<div>student name is {{ 5.689494 | number : "5.1-2" }}</div>
+<div>student name is {{ date | date }}</div>
+<!-- <div>student name is {{ date | date : "dd-mm-yyyy" }}</div> -->
+
+<div>custom pipes</div>
+<div>{{ 3 | square }}</div>

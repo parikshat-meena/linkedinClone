@@ -1,0 +1,16 @@
+<p>pagination works!</p>
+
+<div
+  *ngFor="
+    let user of data | paginate : { itemsPerPage: 5, currentPage: currentPage1 }
+  "
+>
+  <div>{{ user.username }}</div>
+</div>
+<button class="btn btn-primary m-2" (click)="setData()">login</button>
+<pagination-controls
+  (pageChange)="currentPage1 = $event"
+  previousLabel="Prev"
+  nextLabel="Next"
+>
+</pagination-controls>

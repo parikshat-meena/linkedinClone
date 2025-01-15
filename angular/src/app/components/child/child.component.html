@@ -1,0 +1,14 @@
+<p>child works!</p>
+<div>value coming from parent comp {{ fname }}</div>
+<div>value coming from parent comp {{ str }}</div>
+
+<p>
+  <button (click)="sendDataToParent()">send data to parent</button>
+</p>
+<!-- ternary operator -->
+<div [ngClass]="showValue ? 'title' : 'disableText'">
+  this is ng Class attribute
+</div>
+
+<div>new input value : = {{ newInput() }}</div>
+<button routerLink="/home">Go back to home comp</button>

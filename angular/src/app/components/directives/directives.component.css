@@ -1,0 +1,14 @@
+.heading{
+
+    background-color: aquamarine;
+}
+.title{
+    color: black;
+    margin: 10px;
+    padding:10px;
+
+}
+.disableText{
+    color: white;
+    background-color: gray;
+}

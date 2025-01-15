@@ -1,0 +1,88 @@
+<!-- utdf - template driven form  - validatiion are in template file 
+rtf - reactive template form - validation are in ts file  -->
+<!-- in utdf, we will use two directives 
+ngModel , ngForm  -->
+
+<!-- visit             ng-touched         ng-untouched -->
+<!-- value change       ng-dirty          ng-pristine -->
+<!-- is valid           ng-valid          ng-invalid  -->
+
+<form
+  class="m-3 container-sm"
+  #myForm="ngForm"
+  (ngSubmit)="OnSubmit(myForm.value)"
+>
+  <!-- <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      class="form-control"
+      [(ngModel)]="formData.email"
+      #email="ngModel"
+      minlength="4"
+      required
+    />
+  </div> -->
+  <!-- one special , one number, one character  , @ 2-3  -->
+  <!-- <div *ngIf="email.errors?.['required'] " class="text-danger">
+    Email is required
+  </div>
+  <div *ngIf="email.errors?.['minlength'] " class="text-danger">
+    Email should be of 10 letters
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input
+      id="password"
+      name="password"
+      type="password"
+      class="form-control"
+      [(ngModel)]="formData.password"
+      #password="ngModel"
+      minlength="8"
+      maxlength="10"
+      required
+    />
+  </div>
+  <div *ngIf="password.errors?.['minlength']" class="text-danger">
+    password should be greater than 8 characters
+  </div>
+  <div *ngIf="password.errors?.['required']" class="text-danger">
+    password is mandatory
+  </div> -->
+
+  <div class="mb-3">
+    <label for="fname" class="form-label">First name</label>
+    <input
+      id="fname"
+      name="fname"
+      type="fname"
+      class="form-control"
+      [(ngModel)]="formData.fname"
+      #fname="ngModel"
+      maxlength="10"
+      required
+    />
+  </div>
+  <div *ngIf="fname.errors?.['required']" class="text-danger">
+    first name is mandatory
+  </div>
+  <!-- <div *ngIf="fname.errors?.['invalid']" class="text-danger">
+    first name is invalid
+  </div> -->
+  <!-- <div *ngIf="fname.invalid" class="text-danger">first name is invalid</div>
+  <div *ngIf="fname.touched" class="text-danger">first name is touched</div>
+  <div *ngIf="fname.untouched" class="text-danger">first name is untouched</div> -->
+  <div *ngIf="fname.dirty" class="text-danger">first name is dirty</div>
+  <div *ngIf="fname.pristine" class="text-danger">first name is pristine</div>
+  <!-- validations  -->
+  <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">
+    Submit
+  </button>
+</form>
+
+<div *ngIf="isSubmitted" class="alert alert-success">
+  Form Submitted successfully
+</div>

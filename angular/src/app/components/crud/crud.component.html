@@ -1,0 +1,67 @@
+<p>crud works!</p>
+
+<form (ngSubmit)="saveData()" class="container-sm">
+  <input
+    id="fname"
+    class="form-control m-2"
+    [(ngModel)]="currentUser.fname"
+    name="fname"
+    placeholder="enter username"
+  />
+  <input
+    id="role"
+    class="form-control m-2"
+    [(ngModel)]="currentUser.role"
+    name="role"
+    placeholder="enter role"
+  />
+  <button class="btn btn-primary m-2" type="submit">Submit</button>
+</form>
+
+<div>
+  <input
+    id="search"
+    [(ngModel)]="searchText"
+    class="form-control m-2"
+    style="width: 200px"
+    placeholder="search user"
+  />
+</div>
+
+<table class="table table-warning table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>UserName</th>
+      <th>Role</th>
+      <th (click)="orderDataFunc()">Account No.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="
+        let user of userData
+          | searchFilter : searchText : 'fname'
+          | order : 'accountNo' : isAsc
+      "
+    >
+      <td>{{ user.id }}</td>
+      <td>{{ user.fname }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.accountNo }}</td>
+      <td>
+        <button (click)="updateData(user)" class="btn btn-outline-success m-2">
+          <i class="fa-regular fa-pen-to-square"></i>
+        </button>
+      </td>
+      <td>
+        <button
+          (click)="deleteUser(user.id)"
+          class="btn btn-outline-danger m-2"
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
