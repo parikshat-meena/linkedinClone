@@ -22,16 +22,19 @@
     "@angular/router": "^17.3.0",
     "@fortawesome/fontawesome-free": "^6.7.1",
     "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.7",
     "concurrently": "^9.1.0",
     "ngx-pagination": "^6.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "zone.js": "~0.14.3",
+      "@cubejs-client/core": "^0.31.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.11",
     "@angular/cli": "^17.3.11",
     "@angular/compiler-cli": "^17.3.0",
+    "@types/chart.js": "^2.9.41",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
@@ -39,6 +42,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.4.2"
+    "typescript": "~5.4.2",
+     "parcel": "^2.6.2"
   }
 }
