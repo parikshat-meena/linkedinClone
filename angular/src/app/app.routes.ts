@@ -64,7 +64,13 @@ export const routes: Routes = [
   },
   { path: "user", component: UserComponent, canActivate: [authGuard] },
   { path: "crud", component: CrudComponent, canActivate: [authGuard] },
-  { path: "chart", component: ChartComponent, canActivate: [authGuard] },
+  {
+    path: "chart",
+    loadComponent: () =>
+      import("./components/chart/chart.component").then(
+        (m) => m.ChartComponent
+      ),
+  },
   {
     path: "pagination",
     // component: PaginationComponent,
