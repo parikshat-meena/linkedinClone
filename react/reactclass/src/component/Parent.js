@@ -12,6 +12,21 @@ export class Parent extends Component {
     };
   }
 
+  shouldComponentUpdate() {
+    return true;
+  }
+  static getDerivedStateFromProps(props) {
+    return {
+      name: props.name,
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ count: this.state.count + 1 });
+    }, 2000);
+  }
+
   increment = () => {
     this.setState((prevState) => ({ count: prevState.count + 1 }));
     this.setState((prevState) => ({ count: prevState.count + 1 }));
