@@ -7,6 +7,8 @@ import ConditionalRendering from "./component/ConditionalRendering";
 import Parent from "./component/Parent";
 import List from "./component/List";
 import LifeCycleMethods from "./component/LifeCycleMethods";
+import UserComp from "./component/UserComp";
+import ErrorBoundary from "./component/ErrorBoundary";
 
 function App() {
   return (
@@ -18,7 +20,16 @@ function App() {
       {/* <ConditionalRendering></ConditionalRendering> */}
       {/* <Parent name={"xyz"}></Parent> */}
       {/* <List></List> */}
-      <LifeCycleMethods color={"green"}></LifeCycleMethods>
+      {/* <LifeCycleMethods color={"green"}></LifeCycleMethods> */}
+      <ErrorBoundary>
+        <UserComp name="Sachin" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <UserComp name="Virat" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <UserComp name="Rohit" />
+      </ErrorBoundary>
     </>
   );
 }
