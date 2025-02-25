@@ -1,6 +1,5 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable, inject } from "@angular/core";
-import axios from "axios";
 import { Observable } from "rxjs";
 
 @Injectable({
