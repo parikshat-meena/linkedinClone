@@ -13,6 +13,7 @@ import { UserComponent } from "./components/user/user.component";
 import { CrudComponent } from "./components/crud/crud.component";
 import { authGuard } from "./guards/auth.guard";
 import { ChartComponent } from "./components/chart/chart.component";
+import { ImageuploadComponent } from "./components/imageupload/imageupload.component";
 
 // routing is used to navigate to different components within the single page application by adding route in browser link
 export const routes: Routes = [
@@ -64,6 +65,7 @@ export const routes: Routes = [
   },
   { path: "user", component: UserComponent, canActivate: [authGuard] },
   { path: "crud", component: CrudComponent, canActivate: [authGuard] },
+  { path: "image", component: ImageuploadComponent },
   {
     path: "chart",
     loadComponent: () =>
