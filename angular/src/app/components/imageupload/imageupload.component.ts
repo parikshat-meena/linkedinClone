@@ -35,7 +35,7 @@ export class ImageuploadComponent {
   fetchImages() {
     this.imageUploadService.getImages().subscribe((data) => {
       this.images = data;
-      console.log("data fetched successfully");
+      console.log(data, "data fetched successfully");
     });
   }
 

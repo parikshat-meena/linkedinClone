@@ -9,6 +9,8 @@ import List from "./component/List";
 import LifeCycleMethods from "./component/LifeCycleMethods";
 import UserComp from "./component/UserComp";
 import ErrorBoundary from "./component/ErrorBoundary";
+import Comp1 from "./component/Comp1";
+import Comp2 from "./component/Comp2";
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
       {/* <Parent name={"xyz"}></Parent> */}
       {/* <List></List> */}
       {/* <LifeCycleMethods color={"green"}></LifeCycleMethods> */}
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <UserComp name="Sachin" />
       </ErrorBoundary>
       <ErrorBoundary>
@@ -29,7 +31,9 @@ function App() {
       </ErrorBoundary>
       <ErrorBoundary>
         <UserComp name="Rohit" />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
+      <Comp1></Comp1>
+      <Comp2></Comp2>
     </>
   );
 }
