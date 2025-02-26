@@ -26,6 +26,6 @@ app.use("/product", productRouter);
 app.use("/images", imageRouter);
 // Serve Uploaded Files
 console.log(__dirname, "dir");
-app.use("/uploads", express.static("uploads"));
+app.use("/storage", express.static("uploads"));
 
 module.exports = app;

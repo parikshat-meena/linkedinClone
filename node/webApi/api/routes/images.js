@@ -7,7 +7,7 @@ const multer = require("multer");
 // Configure Multer for File Uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/"); // Save files in "uploads" folder
+    cb(null, "uploads/"); // Save files in "uploads" folder // saving our photo in this folder
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);
@@ -21,7 +21,7 @@ router.post("/", upload.single("image"), async (req, res) => {
     if (!req.file) {
       return res.status(400).json({ error: "No file uploaded" });
     }
-    const imageUrl = `http://127.0.1:4500/uploads/${req.file.filename}`;
+    const imageUrl = `http://127.0.1:4500/storage/${req.file.filename}`; // we are storing this link in mongoDB
     const newImage = new images({ name: req.file.originalname, imageUrl });
     await newImage.save();
     res.json({ message: "Image uploaded successfully!", imageUrl });
