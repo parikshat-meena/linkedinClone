@@ -1,8 +1,8 @@
 const http = require("http");
 const app = require("./app");
 require("dotenv").config();
-const port = 4500;
-const hostname = "localhost";
+const port = 4000;
+const hostname = "4000";
 
 // const server = http.createServer((req, res) => {
 //   res.end("<h1>server</h1>");
