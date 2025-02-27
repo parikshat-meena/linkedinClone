@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+// import "./App.css";
 import ClassComp from "./component/ClassComp";
 import FuncComp from "./component/FuncComp";
 import EventComp from "./component/Event";
@@ -14,6 +14,7 @@ import Comp2 from "./component/Comp2";
 import RenderProps from "./component/RenderProps";
 import Comp3 from "./component/Comp3";
 import Comp4 from "./component/Comp4";
+import Color from "./component/Color";
 
 function App() {
   return (
@@ -44,7 +45,8 @@ function App() {
           <Comp3 count={count} incrementHandler={incrementHandler} />
         )}
       /> */}
-      <Comp4></Comp4>
+      {/* <Comp4></Comp4> */}
+      <Color />
     </>
   );
 }
