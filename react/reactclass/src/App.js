@@ -11,6 +11,9 @@ import UserComp from "./component/UserComp";
 import ErrorBoundary from "./component/ErrorBoundary";
 import Comp1 from "./component/Comp1";
 import Comp2 from "./component/Comp2";
+import RenderProps from "./component/RenderProps";
+import Comp3 from "./component/Comp3";
+import Comp4 from "./component/Comp4";
 
 function App() {
   return (
@@ -32,8 +35,16 @@ function App() {
       <ErrorBoundary>
         <UserComp name="Rohit" />
       </ErrorBoundary> */}
-      <Comp1></Comp1>
-      <Comp2></Comp2>
+      {/* <Comp1></Comp1>
+      <Comp2></Comp2> */}
+      {/* <RenderProps user={"shrutika"} /> */}
+      {/* <RenderProps render={(isLogin) => (isLogin ? "Shrutika" : "New user")} /> */}
+      {/* <RenderProps
+        render={(count, incrementHandler) => (
+          <Comp3 count={count} incrementHandler={incrementHandler} />
+        )}
+      /> */}
+      <Comp4></Comp4>
     </>
   );
 }

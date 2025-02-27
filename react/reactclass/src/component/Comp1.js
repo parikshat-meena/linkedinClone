@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import HOC from "./HOC";
+import UserComp from "./UserComp";
 
 class Comp1 extends Component {
   //   constructor(props) {
