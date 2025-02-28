@@ -15,7 +15,10 @@ import RenderProps from "./component/RenderProps";
 import Comp3 from "./component/Comp3";
 import Comp4 from "./component/Comp4";
 import Color from "./component/Color";
-
+import RefComp from "./component/RefComp";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./component/Home";
+import PageNotFound from "./component/PageNotFound";
 function App() {
   return (
     <>
@@ -46,7 +49,16 @@ function App() {
         )}
       /> */}
       {/* <Comp4></Comp4> */}
-      <Color />
+      {/* <Color /> */}
+      {/* <RefComp /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/class" element={<ClassComp />}></Route>
+          <Route path="/func/:id" element={<FuncComp />}></Route>
+          <Route path="/*" element={<PageNotFound />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
