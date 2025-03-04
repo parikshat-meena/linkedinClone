@@ -11,5 +11,5 @@ const hostname = process.env.HOSTNAME;
 const server = http.createServer(app);
 
 server.listen(port, hostname, () => {
-  console.log("server started at 4500");
+  console.log("server started at " + port);
 });
