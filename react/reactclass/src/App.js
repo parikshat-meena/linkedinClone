@@ -23,6 +23,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "./component/Form";
+import CRUD from "./component/CRUD";
 function App() {
   return (
     <>
@@ -61,6 +62,8 @@ function App() {
           <Route path="/class" element={<ClassComp />}></Route>
           <Route path="/func/:id" element={<FuncComp />}></Route>
           <Route path="/form" element={<Form />} />
+          <Route path="/crud" element={<CRUD />} />
+
           <Route path="/*" element={<PageNotFound />}></Route>
         </Routes>
       </BrowserRouter>
