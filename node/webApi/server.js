@@ -11,5 +11,5 @@ const port = process.env.PORT || 3000;
 const server = http.createServer(app);
 
 server.listen(port, () => {
-  console.log("server started at http://" + hostname + ":" + port);
+  console.log("server started at http://" + ":" + port);
 });
