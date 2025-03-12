@@ -24,6 +24,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "./component/Form";
 import CRUD from "./component/CRUD";
+import FunctionalComp from "./component/FunctionalComp";
 function App() {
   return (
     <>
@@ -58,7 +59,7 @@ function App() {
       {/* <RefComp /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<FunctionalComp />}></Route>
           <Route path="/class" element={<ClassComp />}></Route>
           <Route path="/func/:id" element={<FuncComp />}></Route>
           <Route path="/form" element={<Form />} />

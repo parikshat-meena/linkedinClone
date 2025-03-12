@@ -8,7 +8,7 @@ export class CRUD extends Component {
     // this.saveData();
     const id = "67cb0b31038bf432fec1a7dc";
     const obj = { name: "iPhone 16", price: "160000", region: "mumbai" };
-    this.updateData(id, obj);
+    // this.updateData(id, obj);
     // this.deleteItem(id);
     // console.log(res, "res in get data");
   }
