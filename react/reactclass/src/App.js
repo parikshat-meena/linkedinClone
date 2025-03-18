@@ -25,6 +25,7 @@ import Card from "react-bootstrap/Card";
 import Form from "./component/Form";
 import CRUD from "./component/CRUD";
 import FunctionalComp from "./component/FunctionalComp";
+import ReduxFetch from "./component/ReduxFetch";
 function App() {
   return (
     <>
@@ -60,6 +61,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FunctionalComp />}></Route>
+          <Route path="/reduxFetch" element={<ReduxFetch />}></Route>
+
           <Route path="/class" element={<ClassComp />}></Route>
           <Route path="/func/:id" element={<FuncComp />}></Route>
           <Route path="/form" element={<Form />} />
