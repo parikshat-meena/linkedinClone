@@ -26,6 +26,9 @@ import Form from "./component/Form";
 import CRUD from "./component/CRUD";
 import FunctionalComp from "./component/FunctionalComp";
 import ReduxFetch from "./component/ReduxFetch";
+import ReactHooks from "./component/ReactHooks";
+import ParentComp from "./component/ParentComp";
+import MyForm from "./component/MyForm";
 function App() {
   return (
     <>
@@ -61,7 +64,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FunctionalComp />}></Route>
+          <Route path="/myForm" element={<MyForm />}></Route>
+          <Route path="/parent" element={<ParentComp />}></Route>
           <Route path="/reduxFetch" element={<ReduxFetch />}></Route>
+          <Route path="/reactHook" element={<ReactHooks />}></Route>
 
           <Route path="/class" element={<ClassComp />}></Route>
           <Route path="/func/:id" element={<FuncComp />}></Route>
