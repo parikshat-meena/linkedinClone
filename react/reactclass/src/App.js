@@ -29,7 +29,10 @@ import ReduxFetch from "./component/ReduxFetch";
 import ReactHooks from "./component/ReactHooks";
 import ParentComp from "./component/ParentComp";
 import MyForm from "./component/MyForm";
+import { Suspense, lazy } from "react";
+// import CounterComp from "./component/CounterComp";
 function App() {
+  const CounterComp = lazy(() => import("./component/CounterComp"));
   return (
     <>
       {/* <h2>This is a react demo</h2> */}
@@ -62,20 +65,22 @@ function App() {
       {/* <Color /> */}
       {/* <RefComp /> */}
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<FunctionalComp />}></Route>
-          <Route path="/myForm" element={<MyForm />}></Route>
-          <Route path="/parent" element={<ParentComp />}></Route>
-          <Route path="/reduxFetch" element={<ReduxFetch />}></Route>
-          <Route path="/reactHook" element={<ReactHooks />}></Route>
+        <Suspense fallback={<div>loading comp</div>}>
+          <Routes>
+            <Route path="/" element={<CounterComp />}></Route>
+            <Route path="/myForm" element={<MyForm />}></Route>
+            <Route path="/parent" element={<ParentComp />}></Route>
+            <Route path="/reduxFetch" element={<ReduxFetch />}></Route>
+            <Route path="/reactHook" element={<ReactHooks />}></Route>
 
-          <Route path="/class" element={<ClassComp />}></Route>
-          <Route path="/func/:id" element={<FuncComp />}></Route>
-          <Route path="/form" element={<Form />} />
-          <Route path="/crud" element={<CRUD />} />
+            <Route path="/class" element={<ClassComp />}></Route>
+            <Route path="/func/:id" element={<FuncComp />}></Route>
+            <Route path="/form" element={<Form />} />
+            <Route path="/crud" element={<CRUD />} />
 
-          <Route path="/*" element={<PageNotFound />}></Route>
-        </Routes>
+            <Route path="/*" element={<PageNotFound />}></Route>
+          </Routes>
+        </Suspense>
       </BrowserRouter>
       {/* <Button variant="primary">Primary</Button>
       <Button variant="secondary">Secondary</Button>

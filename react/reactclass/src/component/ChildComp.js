@@ -7,9 +7,10 @@ function ChildComp(props) {
     changeSubject(count);
     setCount(count + 1);
   };
+
   return (
     <div>
-      <h3>child comp</h3>
+      <h3>child comp : - </h3>
       <button onClick={() => onChange()}>changeSubject</button>
     </div>
   );
